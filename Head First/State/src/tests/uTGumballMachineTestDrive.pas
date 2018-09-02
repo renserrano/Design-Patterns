@@ -20,33 +20,33 @@ procedure TGumballMachineTestDrive.Teste;
 begin
   gumballMachine := TGumballMachine.Create(5);
   try
-    WriteLn(gumballMachine.ToString);
-    WriteLn('');
+    WriteLine(gumballMachine.ToString);
+    WriteLine('');
 
     gumballMachine.insertQuarter();
     gumballMachine.turnCrank();
-    WriteLn('');
+    WriteLine('');
 
-    WriteLn(gumballMachine.ToString);
-    WriteLn('');
+    WriteLine(gumballMachine.ToString);
+    WriteLine('');
 
     gumballMachine.insertQuarter();
     gumballMachine.ejectQuarter();
     gumballMachine.turnCrank();
-    WriteLn('');
+    WriteLine('');
 
-    WriteLn(gumballMachine.ToString);
-    WriteLn('');
+    WriteLine(gumballMachine.ToString);
+    WriteLine('');
 
     gumballMachine.insertQuarter();
     gumballMachine.turnCrank();
     gumballMachine.insertQuarter();
     gumballMachine.turnCrank();
     gumballMachine.ejectQuarter();
-    WriteLn('');
+    WriteLine('');
 
-    WriteLn(gumballMachine.ToString);
-    WriteLn('');
+    WriteLine(gumballMachine.ToString);
+    WriteLine('');
 
     gumballMachine.insertQuarter();
     gumballMachine.insertQuarter();
@@ -55,9 +55,9 @@ begin
     gumballMachine.turnCrank();
     gumballMachine.insertQuarter();
     gumballMachine.turnCrank();
-    WriteLn('');
+    WriteLine('');
 
-    WriteLn(gumballMachine.ToString);
+    WriteLine(gumballMachine.ToString);
   finally
     gumballMachine.Free;
   end;

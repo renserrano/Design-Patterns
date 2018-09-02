@@ -4,14 +4,14 @@ interface
 
 uses Vcl.StdCtrls;
 
-procedure WriteLn(Value: String);
+procedure WriteLine(Value: String);
 
 var
   MemoConsole : TMemo;
 
 implementation
 
-procedure WriteLn(Value: String);
+procedure WriteLine(Value: String);
 begin
   MemoConsole.Lines.Add(Value);
 end;
