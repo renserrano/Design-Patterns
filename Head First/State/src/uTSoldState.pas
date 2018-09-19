@@ -39,7 +39,7 @@ end;
 
 procedure TSoldState.turnCrank();
 begin
-  WriteLine('Turning twice doesn´t get you another gumball')
+  WriteLine('Turning twice doesn´t get you another gumball');
 end;
 
 procedure TSoldState.dispense();

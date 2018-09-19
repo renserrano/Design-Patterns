@@ -20,7 +20,7 @@ implementation
 
 { THasQuarterState }
 
-uses uFuncoes;
+uses uFuncoes, Math;
 
 constructor THasQuarterState.Create(GumballMachine: TGumballMachine);
 begin
@@ -39,9 +39,19 @@ begin
 end;
 
 procedure THasQuarterState.turnCrank();
+  var
+    intWinner : Integer;
 begin
   WriteLine('You turned...');
-  GumballMachine.setState(GumballMachine.getSoldState());
+
+  Randomize();
+  intWinner := RandomRange(0, 10);
+
+  if ((intWinner = 0) and (GumballMachine.getCount() >1)) then
+    GumballMachine.setState(GumballMachine.getWinnerState())
+  else
+    GumballMachine.setState(GumballMachine.getSoldState());
+
   GumballMachine.dispensed();
 end;
 

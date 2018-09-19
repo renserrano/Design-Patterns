@@ -11,6 +11,7 @@ type
     noQuarterState : IState;
     hasQuarterState : IState;
     soldState : IState;
+    winnerState : IState;
 
     State : IState;
     Count : Integer;
@@ -28,6 +29,7 @@ type
     function getNoQuarterState: IState;
     function getSoldOutState: IState;
     function getSoldState: IState;
+    function getWinnerState: IState;
     procedure releaseBall;
     procedure setState(State: IState);
   end;
@@ -36,7 +38,7 @@ implementation
 
 uses
   System.SysUtils, uTHasQuarterState, uTNoQuarterState, uTSoldOutState,
-  uTSoldState;
+  uTSoldState, uTWinnerState;
 
 { TGumballMachine }
 
@@ -46,6 +48,7 @@ begin
   souldOutState := TSoldOutState.Create(Self);
   noQuarterState := TNoQuarterState.Create(Self);
   hasQuarterState := THasQuarterState.Create(Self);
+  winnerState := TWinnerState.Create(Self);
 
   State := souldOutState;
   Self.Count := numGumballs;
@@ -129,6 +132,11 @@ begin
     result := 'Machine has a quarter'
   else if (State = getSoldState()) Then
     result := 'Machine is sould';
+end;
+
+function TGumballMachine.getWinnerState: IState;
+begin
+  result := winnerState;
 end;
 
 end.
