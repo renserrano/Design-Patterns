@@ -10,7 +10,8 @@ uses
   uTHasQuarterState in 'src\uTHasQuarterState.pas',
   uTNoQuarterState in 'src\uTNoQuarterState.pas',
   uTSoldOutState in 'src\uTSoldOutState.pas',
-  uTSoldState in 'src\uTSoldState.pas';
+  uTSoldState in 'src\uTSoldState.pas',
+  uTWinnerState in 'src\uTWinnerState.pas';
 
 {$R *.res}
 
